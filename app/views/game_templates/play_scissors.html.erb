@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>We played rock!</title>
+
+  <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
+  <meta charset="utf-8">
+
+  <!-- Connect Font Awesome CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.2/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/sketchy/bootstrap.min.css">
+  <!-- Connect Bootstrap JavaScript and its dependencies -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  
+  <!-- Make it responsive to small screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+  <div class="container pt-5">
+    
+    <div class="row">
+      <div class="col-4 mb-3">
+        <a href="/rock" class="btn btn-block btn-outline-info active">
+        <i class="far fa-hand-rock fa-fw"></i>
+        <span class="d-none d-sm-inline">Play Rock</span>
+      </a></div>
+
+      <div class="col-4 mb-3">
+        <a href="/paper" class="btn btn-block btn-outline-info">
+        <i class="far fa-hand-paper fa-fw"></i>
+        <span class="d-none d-sm-inline">Play Paper</span>
+      </a></div>
+
+      <div class="col-4 mb-3">
+        <a href="/scissors" class="btn btn-block btn-outline-info">
+        <i class="far fa-hand-scissors fa-fw"></i>
+        <span class="d-none d-sm-inline">Play Scissors</span>
+      </a></div>
+    </div>
+    
+    <div class="row text-center">
+      <div class="col-sm-6 mb-3">
+        <div class="card border-success">
+          <div class="card-body text-success">
+            <h2 class="card-title">We played scissors!</h2>
+            <p class="card-text"><i class="far fa-hand-scissors fa-10x"></i></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 mb-3">
+        <div class="card border-danger">
+          <div class="card-body text-danger">
+            <h2 class="card-title"><%= @comp_move %></h2>
+            <p class="card-text"><i class="<%= @comp_icon %>"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-12">
+        <div class="<%= @result_style %>">
+          <h2 class="display-3"><%= @result %></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-12">
+        <a href="/">Rules</a>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
